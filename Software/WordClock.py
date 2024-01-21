@@ -46,7 +46,7 @@ options.cols = MATRIX_W
 options.pwm_bits = 8 # Frees up a tiny bit of CPU since 256 levels for each color is all we need.
 options.limit_refresh_rate_hz = 100 # Forces a fixed refresh rate to reduce flicker
 options.gpio_slowdown = 3 # Might be necessary to change this to a slightly larger number on newer, faster Pis's to eliminate flicker.
-options.hardware_mapping = 'adafruit-hat-pwm' # This assumes you did the hardware rework for the Adafruit hat flicker reduction. If not, use "adafruit-hat"
+options.hardware_mapping = 'adafruit-hat' # This assumes you did the hardware rework for the Adafruit hat flicker reduction. If not, use "adafruit-hat"
 
 matrix = RGBMatrix(options = options)
 
