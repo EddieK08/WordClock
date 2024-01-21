@@ -120,27 +120,10 @@ m = {
 def getTimeWords(t=None):
     if t is None:
         t= datetime.now()
-    words = []
-
-    # If it's morning, we say "Good morning!"
-    # Otherwise, we just say Hiya"
-    if t.hour > 5 and t.hour <= 10:
-        words += ['good','morning!']
-    else:
-        words += ['hiya']
-
-    # If it's early, it's "Time for Coffee"
-    # If it's a little later, we say "Carpe Diem"
-    # If it's late, we say "Time for Sleep"
-    if t.hour > 5 and t.hour <= 9:
-        words += ['time','for','coffee']
-    elif t.hour > 9 and t.hour <= 12:
-        words += ['carpe','diem']
-    elif t.hour > 22 or t.hour < 3:
-        words += ['time','for','sleep']
+    words = ['hello']
 
     # Minutes/OClock
-    words += ['it','is1']
+    words += ['it','is']
     if (t.minute <=2 and t.hour != 0 and t.hour !=12) or (t.minute > 57 and t.hour !=23 and t.hour !=11):
         words += ['oclock']
     elif t.minute > 2 and t.minute <= 7:
@@ -167,44 +150,44 @@ def getTimeWords(t=None):
         words += ['five1','minutes','to']
 
     # Hours
-    if t.minute > 32:
+    if t.minute > 30:
         disp_hour = t.hour + 1
     else:
         disp_hour = t.hour
 
     if disp_hour == 0 or disp_hour == 24:
-        words += ['midnight']
+        words += ['twelve2']
     elif disp_hour == 12:
         words += ['noon']
     elif disp_hour == 1 or disp_hour == 13:
-        words += ['one']
+        words += ['one2']
     elif disp_hour == 2 or disp_hour == 14:
-        words += ['two']
+        words += ['two2']
     elif disp_hour == 3 or disp_hour == 15:
-        words += ['three']
+        words += ['three2']
     elif disp_hour == 4 or disp_hour == 16:
-        words += ['four']
+        words += ['four2']
     elif disp_hour == 5 or disp_hour == 17:
         words += ['five2']
     elif disp_hour == 6 or disp_hour == 18:
-        words += ['six']
+        words += ['six2']
     elif disp_hour == 7 or disp_hour == 19:
-        words += ['seven']
+        words += ['seven2']
     elif disp_hour == 8 or disp_hour == 20:
-        words += ['eight']
+        words += ['eight2']
     elif disp_hour == 9 or disp_hour == 21:
-        words += ['nine']
+        words += ['nine2']
     elif disp_hour == 10 or disp_hour == 22:
         words += ['ten2']
     elif disp_hour == 11 or disp_hour == 23:
-        words += ['eleven']
+        words += ['eleven2']
 
     # Time of Day
-    if (t.hour > 0 and t.hour < 11) or (t.hour == 0 and t.minute > 32) or (t.hour == 11 and t.minute <= 32):
+    if t.hour > 0 and t.hour < 12:
         words += ['in','the','morning']
-    elif (t.hour > 12 and t.hour < 18) or (t.hour == 12 and t.minute > 32):
+    elif t.hour > 12 and t.hour < 18:
         words += ['in','the','afternoon']
-    elif (t.hour >= 18 and t.hour < 23) or (t.hour == 23 and t.minute <= 33):
+    elif t.hour >= 18 and t.hour < 24:
         words += ['in','the','evening']
 
     translation = str.maketrans("", "", digits)   
