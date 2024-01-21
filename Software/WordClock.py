@@ -86,6 +86,7 @@ m = {
     "four1"     : {"row" : 8,  "start" : 1,  "length" : 4, "height" : 1},
     "fourteen"  : {"row" : 8,  "start" : 1,  "length" : 8, "height" : 1},
     "minutes"   : {"row" : 8,  "start" : 10, "length" : 7, "height" : 1},
+    "minute"    : {"row" : 8,  "start" : 10, "length" : 6, "height" : 1},
     "past"      : {"row" : 9,  "start" : 1,  "length" : 4, "height" : 1},
     "to"        : {"row" : 9,  "start" : 4,  "length" : 2, "height" : 1},
     "heart"     : {"row" : 9,  "start" : 6,  "length" : 1, "height" : 1},
@@ -124,30 +125,60 @@ def getTimeWords(t=None):
 
     # Minutes/OClock
     words += ['it','is']
-    if (t.minute <=2 and t.hour != 0 and t.hour !=12) or (t.minute > 57 and t.hour !=23 and t.hour !=11):
+    if  t.hour != 12:
         words += ['oclock']
-    elif t.minute > 2 and t.minute <= 7:
+    elif t.minute = 1:
+        words += ['one1','minute','past']
+    elif t.minute = 2:
+        words += ['two1','minutes','past']
+    elif t.minute = 3:
+        words += ['three1','minutes','past']
+    elif t.minute = 4:
+        words += ['four1','minutes','past']
+    elif t.minute = 5:
         words += ['five1','minutes','past']
-    elif t.minute > 7 and t.minute <= 12:
+    elif t.minute = 6:
+        words += ['six1','minutes','past']
+    elif t.minute = 7:
+        words += ['seven1','minutes','past']
+    elif t.minute = 8:
+        words += ['eight1','minutes','past']
+    elif t.minute = 9:
+        words += ['nine1','minutes','past']
+    elif t.minute = 10:
         words += ['ten1','minutes','past']
-    elif t.minute > 12 and t.minute <= 17:
-        words += ['a1','quarter','past']
-    elif t.minute > 17 and t.minute <= 22:
-        words += ['twenty','minutes','past']
-    elif t.minute > 22 and t.minute <= 27:
-        words += ['twenty','five1','minutes','past']
-    elif t.minute > 27 and t.minute <= 32:
-        words += ['half','past']
-    elif t.minute > 32 and t.minute <= 37:
-        words += ['twenty','five1','minutes','to']
-    elif t.minute > 37 and t.minute <= 42:
-        words += ['twenty','minutes','to']
-    elif t.minute > 42 and t.minute <= 47:
-        words += ['a1','quarter','to']
-    elif t.minute > 47 and t.minute <= 52:
-        words += ['ten1','minutes','to']
-    elif t.minute > 52 and t.minute <= 57:
-        words += ['five1','minutes','to']
+    elif t.minute = 11:
+        words += ['eleven1','minutes','past']
+    elif t.minute = 12:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 13:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 14:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 15:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 16:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 17:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 18:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 19:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 20:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 20:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 21:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 22:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 23:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 24:
+        words += ['twelve1','minutes','past']
+    elif t.minute = 25:
+        words += ['twelve1','minutes','past']
 
     # Hours
     if t.minute > 30:
@@ -183,11 +214,11 @@ def getTimeWords(t=None):
         words += ['eleven2']
 
     # Time of Day
-    if t.hour > 0 and t.hour < 12:
+    if t.hour >= 0 and t.hour < 12:
         words += ['in','the','morning']
     elif t.hour > 12 and t.hour < 18:
         words += ['in','the','afternoon']
-    elif t.hour >= 18 and t.hour < 24:
+    elif t.hour >= 18 and t.hour <= 24:
         words += ['in','the','evening']
 
     translation = str.maketrans("", "", digits)   
