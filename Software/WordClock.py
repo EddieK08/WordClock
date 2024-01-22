@@ -127,123 +127,123 @@ def getTimeWords(t=None):
     words += ['it','is']
     if  t.hour != 12:
         words += ['oclock']
-    elif t.minute = 1:
+    elif t.minute == 1:
         words += ['one1','minute','past']
-    elif t.minute = 2:
+    elif t.minute == 2:
         words += ['two1','minutes','past']
-    elif t.minute = 3:
+    elif t.minute == 3:
         words += ['three1','minutes','past']
-    elif t.minute = 4:
+    elif t.minute == 4:
         words += ['four1','minutes','past']
-    elif t.minute = 5:
+    elif t.minute == 5:
         words += ['five1','minutes','past']
-    elif t.minute = 6:
+    elif t.minute == 6:
         words += ['six1','minutes','past']
-    elif t.minute = 7:
+    elif t.minute == 7:
         words += ['seven1','minutes','past']
-    elif t.minute = 8:
+    elif t.minute == 8:
         words += ['eight1','minutes','past']
-    elif t.minute = 9:
+    elif t.minute == 9:
         words += ['nine1','minutes','past']
-    elif t.minute = 10:
+    elif t.minute == 10:
         words += ['ten1','minutes','past']
-    elif t.minute = 11:
+    elif t.minute == 11:
         words += ['eleven1','minutes','past']
-    elif t.minute = 12:
+    elif t.minute == 12:
         words += ['twelve1','minutes','past']
-    elif t.minute = 13:
+    elif t.minute == 13:
         words += ['thirteen','minutes','past']
-    elif t.minute = 14:
+    elif t.minute == 14:
         words += ['fourteen','minutes','past']
-    elif t.minute = 15:
+    elif t.minute ==15:
         words += ['quarter','past']
-    elif t.minute = 16:
+    elif t.minute == 16:
         words += ['sixteen','minutes','past']
-    elif t.minute = 17:
+    elif t.minute == 17:
         words += ['seventeen','minutes','past']
-    elif t.minute = 18:
+    elif t.minute == 18:
         words += ['eighteen','minutes','past']
-    elif t.minute = 19:
+    elif t.minute == 19:
         words += ['nineteen','minutes','past']
-    elif t.minute = 20:
+    elif t.minute == 20:
         words += ['twenty','minutes','past']
-    elif t.minute = 21:
+    elif t.minute == 21:
         words += ['twenty','one1','minutes','past']
-    elif t.minute = 22:
+    elif t.minute == 22:
         words += ['twenty','two1','minutes','past']
-    elif t.minute = 23:
+    elif t.minute == 23:
         words += ['twenty','three1','minutes','past']
-    elif t.minute = 24:
+    elif t.minute == 24:
         words += ['twenty','four1','minutes','past']
-    elif t.minute = 25:
+    elif t.minute == 25:
         words += ['twenty','five1','minutes','past']
-    elif t.minute = 26:
+    elif t.minute == 26:
         words += ['twenty','six1','minutes','past']
-    elif t.minute = 27:
+    elif t.minute == 27:
         words += ['twenty','seven1','minutes','past']
-    elif t.minute = 28:
+    elif t.minute == 28:
         words += ['twenty','eight1','minutes','past']
-    elif t.minute = 29:
+    elif t.minute == 29:
         words += ['twenty','nine1','minutes','past']
-    elif t.minute = 30:
+    elif t.minute == 30:
         words += ['half','past']
-    elif t.minute = 31:
+    elif t.minute == 31:
         words += ['twenty','nine1','minutes','to'] 
-    elif t.minute = 32:
+    elif t.minute == 32:
         words += ['twenty','eight1','minutes','to']
-    elif t.minute = 33:
+    elif t.minute == 33:
         words += ['twenty','seven1','minutes','to']
-    elif t.minute = 34:
+    elif t.minute == 34:
         words += ['twenty','six1','minutes','to']
-    elif t.minute = 35:
+    elif t.minute == 35:
         words += ['twenty','five1','minutes','to']
-    elif t.minute = 36:
+    elif t.minute == 36:
         words += ['twenty','four1','minutes','to']
-    elif t.minute = 37:
+    elif t.minute == 37:
         words += ['twenty','three1','minutes','to']
-    elif t.minute = 38:
+    elif t.minute == 38:
         words += ['twenty','two1','minutes','to']
-    elif t.minute = 39:
+    elif t.minute == 39:
         words += ['twenty','one1','minutes','to']
-    elif t.minute = 40:
+    elif t.minute == 40:
         words += ['twenty','minutes','to']
-    elif t.minute = 41:
+    elif t.minute == 41:
         words += ['nineteen','minutes','to']
-    elif t.minute = 42:
+    elif t.minute == 42:
         words += ['eighteen','minutes','to']
-    elif t.minute = 43:
+    elif t.minute == 43:
         words += ['seventeen','minutes','to']
-    elif t.minute = 44:
+    elif t.minute == 44:
         words += ['sixteen','minutes','to']
-    elif t.minute = 45:
+    elif t.minute == 45:
         words += ['quarter','to']
-    elif t.minute = 46:
+    elif t.minute == 46:
         words += ['fourteen','minutes','to']
-    elif t.minute = 47:
+    elif t.minute == 47:
         words += ['thirteen','minutes','to']
-    elif t.minute = 48:
+    elif t.minute == 48:
         words += ['twelve1','minutes','to']
-    elif t.minute = 49:
+    elif t.minute == 49:
         words += ['eleven1','minutes','to']
-    elif t.minute = 50:
+    elif t.minute == 50:
         words += ['ten1','minutes','to']
-    elif t.minute = 51:
+    elif t.minute == 51:
         words += ['nine1','minutes','to']
-    elif t.minute = 52:
+    elif t.minute == 52:
         words += ['eight1','minutes','to']
-    elif t.minute = 53:
+    elif t.minute == 53:
         words += ['seven1','minutes','to']
-    elif t.minute = 54:
+    elif t.minute == 54:
         words += ['six1','minutes','to']
-    elif t.minute = 55:
+    elif t.minute == 55:
         words += ['five1','minutes','to']
-    elif t.minute = 56:
+    elif t.minute == 56:
         words += ['four1','minutes','to']
-    elif t.minute = 57:
+    elif t.minute == 57:
         words += ['three1','minutes','to']
-    elif t.minute = 58:
+    elif t.minute == 58:
         words += ['two1','minutes','to']
-    elif t.minute = 59:
+    elif t.minute == 59:
         words += ['one1','minute','to']
     
     
