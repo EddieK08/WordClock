@@ -378,20 +378,6 @@ def run(mode="clock", primary_color=RED, secondary_color=AQUA, modifiers=[]):
             if "birthday" in modifiers and t.month == BIRTH_MONTH and t.day == BIRTH_DAY and secondary_counter%5 == 0 and secondary_counter < 100:
                 secondary_words += ['happy','birthday']
                 print("            - Happy Birthday")
-            if "friday" in modifiers and t.weekday() == 4 and (secondary_counter+2)%5 == 0 and secondary_counter < 100:
-                secondary_words +=['happy','friday']
-                print("            - Happy Friday")
-            if "iloveyou" in modifiers and "midnight" not in primary_words and (secondary_counter+3)%20 == 0 and secondary_counter < 100:
-                # Uses the "I" in midnight, so it doesn't run if midnight is lit up
-                secondary_words += ['i','love','you']
-                print("            - I Love You")
-            if "byjeremy" in modifiers and "oclock" not in primary_words and secondary_counter>=100 and secondary_counter<=105:
-                # Uses "Clock" in "oclock", so it doesn't run if oclock is lit up
-                secondary_words += ['this','is2','a2','word','clock','built','with','love','by','jeremy','heart2']
-                print("            - This is a word clock built with love by Jeremy <3")
-            if "leah" in modifiers:
-                tertiary_words = ['leah1', 'heart1']
-                tertiary_color = FADE_COLORS[fade_counter]
 
             setDisplay(primary_words,primary_color,secondary_words,secondary_color,tertiary_words,tertiary_color)
             fade_counter += 1
@@ -413,4 +399,4 @@ def exit_handler():
 if __name__ == '__main__':
     atexit.register(exit_handler)
     signal.signal(signal.SIGINT, lambda x,y: sys.exit(0))
-    run("clock", modifiers=["birthday","friday","iloveyou","byjeremy","leah"])
+    run("clock", modifiers=["birthday"])
