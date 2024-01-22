@@ -123,11 +123,12 @@ def getTimeWords(t=None):
         t= datetime.now()
     words = ['hello']
 
-    # Minutes/OClock
-    words += ['it','is']
     if  t.hour != 12:
         words += ['oclock']
-    elif t.minute == 1:
+    
+    # Minutes/OClock
+    words += ['it','is']
+    if t.minute == 1:
         words += ['one1','minute','past']
     elif t.minute == 2:
         words += ['two1','minutes','past']
