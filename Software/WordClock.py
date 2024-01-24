@@ -1,18 +1,11 @@
 #!/usr/bin/python3
 
 # WordClock
-# Made for Leah by Jeremy
-# Original: (c) 2016 Blum Idea Labs
-# Updated: (c) 2020 Blum Idea Labs
-# www.jeremyblum.com
-
-# Follow the instructions in the GitHub Repo README for prerequisites that must be installed first.
 
 import sys, os, time, argparse, atexit, signal
 from datetime import datetime
 from string import digits
 
-# Assumes the installer script already installed the rgbmatrix library globally, configured for the Adafruit hat
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from PIL import Image
 import numpy as np
@@ -33,25 +26,23 @@ AQUA    = [0,   255, 255]
 WHITE   = [255, 255, 255]
 
 # Birthday
-BIRTH_MONTH = 8
-BIRTH_DAY = 29
+BIRTH_MONTH = 2
+BIRTH_DAY = 2
 
-#Color Fade Order (for Leah <3)
-FADE_COLORS = [LIME, YELLOW, RED, FUCHSIA, BLUE, AQUA]
 
 # Enumerate RGB Matrix Object
 options = RGBMatrixOptions()
 options.rows = MATRIX_H
 options.cols = MATRIX_W
-options.pwm_bits = 8 # Frees up a tiny bit of CPU since 256 levels for each color is all we need.
-options.limit_refresh_rate_hz = 100 # Forces a fixed refresh rate to reduce flicker
-options.gpio_slowdown = 3 # Might be necessary to change this to a slightly larger number on newer, faster Pis's to eliminate flicker.
-options.hardware_mapping = 'adafruit-hat' # This assumes you did the hardware rework for the Adafruit hat flicker reduction. If not, use "adafruit-hat"
+options.pwm_bits = 8 
+options.limit_refresh_rate_hz = 100 
+options.gpio_slowdown = 3 
+options.hardware_mapping = 'adafruit-hat' 
 
 matrix = RGBMatrix(options = options)
 
 # Word Dictionary
-# Uses the Physical Grid mapping for the laser cut grid:
+# Uses the Physical Grid mapping for the cut 16x16 grid:
 # X is 1 - 16 inclusive
 # Y is 1 - 16 includive
 # Origin is top left corner 
@@ -297,7 +288,6 @@ def getTimeWords(t=None):
 # Generate the Pixel Buffer based on what words should be illuminated
 # primary_words: The list of words to light up in the primary_color (usually the time)
 # secondary_words: The list of words to light up in the secondary color (usually a special message)
-# tertiary_words: The list of words to light up it the tertiary color (the Leah <3 Logo, in our case)
 # fade_steps_time is the added delay time between each of the fade steps (float, seconds)
 # fade_steps_number is the number of intermediate colors in the fade
 start_buff = np.zeros((MATRIX_H * MATRIX_DIV, MATRIX_W * MATRIX_DIV, 3), dtype=np.int16)
