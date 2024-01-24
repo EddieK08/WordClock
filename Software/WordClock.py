@@ -275,9 +275,9 @@ def getTimeWords(t=None):
     # Time of Day
     if t.hour >= 0 and t.hour < 12:
         words += ['in','the','morning']
-    elif t.hour > 12 and t.hour < 18:
+    elif t.hour > 12 and t.hour < 17:
         words += ['in','the','afternoon']
-    elif t.hour >= 18 and t.hour <= 24:
+    elif t.hour >= 17 and t.hour <= 24:
         words += ['in','the','evening']
 
     translation = str.maketrans("", "", digits)   
