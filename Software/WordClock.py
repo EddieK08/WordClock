@@ -320,8 +320,6 @@ def setDisplay(primary_words=[], primary_color=RED, secondary_words=[], secondar
 
     start_buff = end_buff # Use this global var for enabling state fades
 
-    
-
 # Runs the Word Clock in a certain mode
 # mode (pick one):
 #   basic_test: Just lights up all the word units in all the colors to test them
@@ -329,12 +327,8 @@ def setDisplay(primary_words=[], primary_color=RED, secondary_words=[], secondar
 #   clock: Normal Clock mode. Endless Loop. Can Have modifiers applied. Shows time in primary color
 # primary_color: RGB primary color to use for clock words
 # secondary_color: RGB color to use for modifiers
-# modifiers (pass as a list):
-#   "leah":lights up "Leah <3" in slowly changing colors
-#   "birthday": Shows the birthday message in the secondary color (if it's Leah's birthday)
-#   "friday": Shows the Friday message in the secondary color
-#   "iloveyou": Ocassionally show the iloveyou message in the secondary color
-#   "byjeremy": Ocassionally show the byjeremy message in the secondary color
+
+
 def run(mode="clock", primary_color=RED, secondary_color=AQUA, modifiers=[]):
     if mode == "basic_test":
         print("Testing each word & Color...")
